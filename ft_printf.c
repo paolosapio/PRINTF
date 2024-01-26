@@ -6,7 +6,7 @@
 /*   By: psapio <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 14:16:23 by psapio            #+#    #+#             */
-/*   Updated: 2024/01/26 19:01:01 by psapio           ###   ########.fr       */
+/*   Updated: 2024/01/26 20:23:20 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -71,6 +71,8 @@ int main (void)
 {
     char name[] = "Paolo";
     int edad = 44;
+	int n_print_return;
 
-    ft_printf("Hola me llamo %s\n", name, edad);
+	n_print_return = ft_printf("Hola me llamo %s\n", name, edad);
+	printf("%d\n", n_print_return);
 }
