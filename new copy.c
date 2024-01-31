@@ -6,7 +6,7 @@
 /*   By: psapio <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 14:16:23 by psapio            #+#    #+#             */
-/*   Updated: 2024/01/31 20:23:02 by psapio           ###   ########.fr       */
+/*   Updated: 2024/01/31 19:52:13 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -32,28 +32,25 @@ int print_string(char *str)
 
 int	percentualizeitor(char const *format, va_list arguments, int *count_char)
 {
-	int n;
-
-	n = 2;
 	if (format[1] == 's')
 		*count_char = *count_char + print_string(va_arg(arguments, char*));
-/*	else if (format[1] == 'd')
-		//funcion que imprime numeros;
-	else if (format[1] == 'i')
-		//funcion que imprime numeros;
-	else if (format[1] == 'c')
-		//funcion que imprime char;
-	else if (format[1] == 'x')
-		//funcion que imprime exadecimales;
-	else if (format[1] == 'X')
-		//funcion que imprime exadecimales mayuscculos;
-	else if (format[1] == 'p')
-		//funcion que imprime direcion de memoria en exadecimal;
-	else if (format[1] == '%')
-		//imprime simplemente un '%'*/
+	/*	if (format[1] == 'd')
+		funcion que imprime numeros;
+	if (format[1] == 'i')
+		funcion que imprime numeros;
+	if (format[1] == 'c')
+		funcion que imprime char;
+	if (format[1] == 'x')
+		funcion que imprime exadecimales;
+	if (format[1] == 'X')
+		funcion que imprime exadecimales mayuscculos;
+	if (format[1] == 'p')
+		funcion que imprime direcion de memoria en exadecimal;
+	if (format[1] == '%')
+		imprime simplemente un '%';*/
+	return (2);
 	else
-		n = 1;
-	return (n);
+		return (1);
 }
 
 int ft_printf(char const *format, ...)
