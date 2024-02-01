@@ -6,7 +6,7 @@
 /*   By: psapio <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 14:16:23 by psapio            #+#    #+#             */
-/*   Updated: 2024/01/31 20:23:02 by psapio           ###   ########.fr       */
+/*   Updated: 2024/02/01 14:41:41 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -36,11 +36,10 @@ int	percentualizeitor(char const *format, va_list arguments, int *count_char)
 
 	n = 2;
 	if (format[1] == 's')
-		*count_char = *count_char + print_string(va_arg(arguments, char*));
-/*	else if (format[1] == 'd')
-		//funcion que imprime numeros;
-	else if (format[1] == 'i')
-		//funcion que imprime numeros;
+		*count_char += print_string(va_arg(arguments, char*));
+	else if ((format[1] == 'd') || (format[1] == 'i'))
+		*count_char += ft_putnbr_pf(va_arg(arguments, int));
+/*
 	else if (format[1] == 'c')
 		//funcion que imprime char;
 	else if (format[1] == 'x')
@@ -82,7 +81,7 @@ int ft_printf(char const *format, ...)
 int main (void)
 {
     char name[] = "Paolo";
-    int edad = 44;
+    int edad = -444;
 	int n_print_return;
 
 	n_print_return = ft_printf("Hola me llamo %s y tengo %d años\n", name, edad);
