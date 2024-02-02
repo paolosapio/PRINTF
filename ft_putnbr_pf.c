@@ -6,12 +6,12 @@
 /*   By: psapio <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 19:37:38 by psapio            #+#    #+#             */
-/*   Updated: 2024/02/01 14:41:03 by psapio           ###   ########.fr       */
+/*   Updated: 2024/02/02 15:17:07 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "ft_printf.h"
 
 int	ft_putnbr_pf(int n)
-
 {
 	int		write_count;
 	char	char_conv_mod;
