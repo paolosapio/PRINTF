@@ -6,7 +6,7 @@
 /*   By: psapio <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 14:16:23 by psapio            #+#    #+#             */
-/*   Updated: 2024/02/07 21:54:20 by psapio           ###   ########.fr       */
+/*   Updated: 2024/02/07 21:58:40 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
@@ -27,6 +27,8 @@ int	ft_printf(char const *format, ...)
 		else
 		{
 			count_char += write(1, &format[i], 1);
+			if (count_char == -1)
+				return (-1);
 			i++;
 		}
 	}
