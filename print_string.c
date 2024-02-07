@@ -6,20 +6,22 @@
 /*   By: psapio <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 15:04:57 by psapio            #+#    #+#             */
-/*   Updated: 2024/02/02 17:52:10 by psapio           ###   ########.fr       */
+/*   Updated: 2024/02/07 21:50:32 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
 
-int print_string(char *str)
+int	print_string(char *str)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while(str[i] != '\0')
+	if (!str)
+		return (write(1, "(null)", 6));
+	i = 0;
+	while (str[i] != '\0')
 	{
-        write (1, &str[i], 1);
+		write (1, &str[i], 1);
 		i++;
 	}
-    return (i);
+	return (i);
 }

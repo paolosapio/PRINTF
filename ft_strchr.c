@@ -6,7 +6,7 @@
 /*   By: psapio <psapio@student.42madrid.c>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 13:09:41 by psapio            #+#    #+#             */
-/*   Updated: 2024/02/02 15:17:27 by psapio           ###   ########.fr       */
+/*   Updated: 2024/02/07 21:29:09 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
@@ -32,7 +32,7 @@ char	*ft_strchr(const char *s, int c)
 		{
 			return ((char *)&s[i]);
 		}
-	i++;
+		i++;
 	}
 	return (NULL);
 }

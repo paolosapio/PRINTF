@@ -6,12 +6,12 @@
 /*   By: psapio <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 14:16:23 by psapio            #+#    #+#             */
-/*   Updated: 2024/02/02 18:15:27 by psapio           ###   ########.fr       */
+/*   Updated: 2024/02/07 21:54:20 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
 
-int ft_printf(char const *format, ...)
+int	ft_printf(char const *format, ...)
 {
 	va_list	arguments;
 	int		i;
@@ -33,7 +33,7 @@ int ft_printf(char const *format, ...)
 	va_end(arguments);
 	return (count_char);
 }
-
+/*
 int main (void)
 {
     char name[] = "Paolo";
@@ -41,6 +41,9 @@ int main (void)
 	char letter = 'S';
 	int n_print_return;
 
-	n_print_return = ft_printf("Hola me%% % llamo %s\ntengo %d años\ninicial del apellido %c\n", name, edad, letter);
-	printf("\n\n%d\n", n_print_return);
-}
+	   n_print_return = printf("original: %p\n", name);
+	ft_printf("cuenta mia de caracteres impresos:%d\n", n_print_return);
+	n_print_return = ft_printf("mia: %p\n", name);
+	printf("cuenta original de caracteres impresoso: %d\n", n_print_return);
+
+}*/
